@@ -69,3 +69,94 @@ console.log(x > y); /* Maior que:                   >   */
 console.log(x >= y); /* Maior ou igual que:         >=  */
 console.log(x < y); /* Menor que:                   <   */
 console.log(x <= y); /* Menor ou igual que:         <=  */
+
+/* Conversão de tipos */
+
+const meuNumero2 = "123";
+
+let meuNumero2Convertid = Number(meuNumero2); /* Convertendo para numero */
+console.log(typeof meuNumero2Convertid);
+
+let meuNumero2Convertido = String(meuNumero2); /* Convertendo para string */
+console.log(typeof meuNumero2Convertido);
+
+/* Estruturas de condição - if, else, else if */
+
+const idade = 20;
+
+if (idade < 13) {
+  console.log("Criança");
+} else if (idade > 18) {
+  console.log("Adulto");
+} else {
+  console.log("Adolecente");
+}
+
+/* Switch */
+
+const fruta = "Banana";
+
+switch (fruta) {
+  case "Banana":
+    console.log("Banana é a fruta!");
+    break;
+
+  case "Maça":
+    console.log("Maça é a fruta!");
+    break;
+
+  case "Romã":
+    console.log("Romã é a fruta!");
+    break;
+  /* Sempre dentro de cada [CASE] é necessario um [BREAK] */
+  default:
+    console.log("Fruta não encontrada!");
+}
+
+/* Estruturas de repetição */
+
+// for (let contador; condição de limite; quanto vai incrementar por repetição) { corpo }
+
+for (let i = 0; i < 7; i++) {
+  console.log(`O valor de i é: ${i}.`);
+}
+
+let k = 0;
+
+while (k < 7) {
+  console.log(`O valor de k é: ${k}.`);
+  k++;
+}
+
+/* Podemos fazer tanto com [WHILE] quanto com [FOR] */
+
+/* Funções */
+// function nome(argumento1, argumento2 [LEMBRETE: Argumentos não são obrigadorios]) { corpo }
+
+function cumprimentar(nome) {
+  console.log(`Olá, ${nome} sejá bem vindo(a).`);
+}
+
+cumprimentar("Luiz Madrid");
+
+/* Hoisting = içamento */
+
+testeHoisting();
+
+function testeHoisting() {
+  console.log("Chamei a variavel antes de declarar ela!");
+}
+
+/* Arrow functions */
+
+const testeArrow = () => console.log("Outra maneira de função");
+
+testeArrow();
+
+/* Math */
+
+console.log(Math.PI);
+
+console.log(Math.round(3.6));
+console.log(Math.sqrt(16));
+console.log(Math.pow(16, 3));
