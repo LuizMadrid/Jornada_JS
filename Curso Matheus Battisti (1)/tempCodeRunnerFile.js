@@ -1,7 +1,3 @@
-let nome = "Luiz Madrid";
-
-function cumprimentar() {
-  console.log(`Olá, ${nome} sejá bem vindo(a).`);
-}
-
-cumprimentar();
+let numeroString = "1234";
+let numeroStringConvertido = Number(numeroString);
+console.log(typeof numeroStringConvertido);
