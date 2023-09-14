@@ -108,3 +108,58 @@ promessa
     console.log(erro);
   });
 // [promise] não é comumente usado no dia a dia, usamos async, await.
+
+// Bibliotecas feitas que são [promise based]
+
+const promise1 = Promise.resolve(3);
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 2500, "testando!");
+});
+
+Promise.all([promise1, promise2]).then((valores) => console.log(valores));
+
+// Async e o Await.
+
+async function obterValor() {
+  const promessa = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("Valor obtido!"), 2000);
+  });
+
+  const valor = await promessa;
+
+  console.log(valor);
+}
+
+obterValor();
+
+async function obterValorComErro() {
+  try {
+    const promessa = new Promise((resolve, reject) => {
+      setTimeout(() => reject("Valor com erro!"), 2000);
+    });
+
+    const valor = await promessa;
+
+    console.log(valor);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+obterValorComErro();
+
+// JSON (padroniza a comunicação com front e back)
+
+const objeto = { nome: "Luiz", idade: 22 };
+const jsonString = JSON.stringify(objeto);
+
+console.log(jsonString);
+console.log(typeof jsonString);
+
+/* ----========---- */
+
+const objetoEmJson = '{ "nome": "Luiz", "idade": "22" }';
+const objeto2 = JSON.parse(objetoEmJson);
+
+console.log(objeto2);
+console.log(typeof objeto2);
