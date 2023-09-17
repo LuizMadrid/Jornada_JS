@@ -1,3 +1,4 @@
-let numeroString = "1234";
-let numeroStringConvertido = Number(numeroString);
-console.log(typeof numeroStringConvertido);
+const arrayComFor = ["Altair", "Ezio", "Bayek", "Edward", "Shay"];
+for (let i = 0; i < arrayComFor.length; i = i++) {
+  console.log(arrayComFor[i]);
+}
