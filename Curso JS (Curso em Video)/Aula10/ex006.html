@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciando Eventos DOM</title>
+    <style>
+        div {
+            font: normal 15pt Arial;
+            background-color: dimgrey;
+            color: white;
+            width: 400px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        body {
+            background-color: bisque;
+            font: normal 15pt Arial;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Começe interagir com esse botão...
+    </div>
+
+    <script>
+        var clique = document.getElementById('area')
+        clique.addEventListener('click', Evento_Clicar)
+        clique.addEventListener('mouseenter', Evento_MouseEntrar)
+        clique.addEventListener('mouseout', Evento_MouseSair)
+
+        function Evento_Clicar() {
+            clique.innerText = 'Você Clicou!!'
+            clique.style.background = 'red'
+        } 
+
+        function Evento_MouseSair() {
+            clique.innerText = 'Seu mouse saiu da área!!'
+            clique.style.background = 'dimgrey'
+        } 
+
+        function Evento_MouseEntrar() {
+            clique.innerText = 'Seu mouse entrou na área!!'
+            clique.style.background = 'dimgrey'
+        } 
+    </script>
+</body>
+</html>

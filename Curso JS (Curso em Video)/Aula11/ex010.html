@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra seu Poder de Luta!!</title>
+    <style>
+        body {
+            background-color: dimgrey;
+            color: black;
+            font: Normal 15pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Você nobre guerreiro conseguirá derrotar o Vegeta, O Príncipe dos Sayadins ?</h1>
+    Seu poder de luta é de: <input type="number" name="txtpw" id="txtpw">    
+    <input type="button" value="Averiguar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function calcular() {
+            var pw_real = document.getElementById('txtpw')
+            var res = document.getElementById('res')
+            var pw_de = Number(txtpw.value)
+            if (pw_de > 8) {
+                res.innerHTML = `<p> Seu poder de luta é de:<strong> ${pw_de} mil!!</strong> Parabéns você é um guerreiro de <strong>classe alta.</strong> Vegeta foi derrotado.`
+            } else {
+                res.innerHTML = `Que pena seu poder de luta é de:<strong> ${pw_de} mil!.</strong> Vegeta lhe matou com um <strong>Galick Ho!</strong>`
+            } 
+        }
+        
+    </script>
+</body>
+</html>
