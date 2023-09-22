@@ -29,3 +29,12 @@ console.log(subtrair(8, 3));
 const multiplicar = (num1, num2) => num1 * num2;
 
 console.log(multiplicar(3, 3));
+
+/* ----========---- ----========---- ----========---- */
+
+// ? First Class Functions.
+// * Possibilita que uma função pode ser tratada como uma variavel como fizemos com [arrow functions].
+// * Por exemplo, uma função pode ser passada como parâmetro para outra função, assim como pode ser retornada por uma função e esse retorno pode ser atribuído a uma variável.
+
+// ? High Order Functions.
+// * É uma função que recebe outra função como parâmetro/argumento, ou uma função que retorna outra função.
